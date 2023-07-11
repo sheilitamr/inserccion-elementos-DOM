@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Insercción elementos</title>
+  </head>
+  <body>
+    <!-- EJERCICIO 1 -->
+    <button id="button">Añadir Elementos</button>
+    <ul id="list">
+      <li>Item 1</li>
+    </ul>
+
+    <!-- EJERCICIO 2 -->
+    <div id="container-range">
+      <label id="number-label">1</label>
+      <input type="range" id="range" min="1" max="6" step="1" value="1" />
+      <button id="generate-button">Generar Encabezado</button>
+    </div>
+
+    <!-- EJERCICIO 3 -->
+    <h1>Posts</h1>
+    <h2>Post de ejemplo</h2>
+    <!-- Contenedor de posts -->
+    <div id="main-container">
+      <!-- Post independiente -->
+      <div>
+        <span>Author: Dorian</span>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <!-- Fin del post independiente -->
+    </div>
+    <!-- Fin del contenedor de posts -->
+    <form id="form">
+      <div>
+        <label>Author</label>
+        <input type="text" name="author" />
+      </div>
+      <div>
+        <label>Message:</label>
+        <textarea name="message"></textarea>
+      </div>
+      <button id="send-button">Send Post</button>
+    </form>
+
+    <!-- EJERCICIO 3 INSERCCIÓN MÚLTIPLE -->
+    <input type="text" id="input" />
+    <div id="container-list">
+      <ul></ul>
+    </div>
+
+    <!-- EJERCICIO 4 INSERCCIÓN MÚLTIPLE -->
+    <label>Introduce un número</label>
+    <input type="text" id="input-number" />
+    <button id="button-multiply" disabled>Imprimir tabla de multiplicar</button>
+    <ul id="multiply-list"></ul>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
