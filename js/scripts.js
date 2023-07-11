@@ -207,3 +207,67 @@ const multiplicationTable = () => {
 
 buttonMultiply.addEventListener('click', multiplicationTable);
 inputNumberElement.addEventListener('input', setButtonStatus);
+
+/* Ejercicio 5 */
+const USERS = [
+  {
+    name: 'Josep Flores',
+    age: 77,
+    username: 'Josep85',
+    email: 'Josep_Flores@hotmail.com',
+    profileImage: 'https://randomuser.me/api/portraits/women/24.jpg'
+  },
+  {
+    name: 'Ricardo Rosas',
+    age: 43,
+    username: 'Ricardo_Rosas',
+    email: 'Ricardo_Rosas22@yahoo.com',
+    profileImage: 'https://randomuser.me/api/portraits/men/57.jpg'
+  },
+  {
+    name: 'Iván Tamayo',
+    age: 40,
+    username: 'tamayo87',
+    email: 'Ivan_Tamayo61@yahoo.com',
+    profileImage: 'https://randomuser.me/api/portraits/men/9.jpg'
+  },
+  {
+    name: 'Maica Villanueva',
+    age: 64,
+    username: 'Maica.Villanueva18',
+    email: 'Maica.Villanueva1@yahoo.com',
+    profileImage: 'https://randomuser.me/api/portraits/women/4.jpg'
+  },
+  {
+    name: 'Pedro Estrada',
+    age: 77,
+    username: 'Pedro29',
+    email: 'Pedro_Estrada22@hotmail.com',
+    profileImage: 'https://randomuser.me/api/portraits/men/2.jpg'
+  },
+  {
+    name: 'Jorge Cedillo',
+    age: 33,
+    username: 'Jorge_Cedillo',
+    email: 'Jorge.Cedillo2@yahoo.com',
+    profileImage: 'https://randomuser.me/api/portraits/men/88.jpg'
+  }
+];
+
+const fragment = document.createDocumentFragment();
+const divCard = document.getElementById('div');
+const nameCard = document.getElementById('p');
+const ageCard = document.getElementById('p');
+const userNameCard = document.getElementById('p');
+const emailCard = document.getElementById('p');
+const imageCard = document.getElementById('img');
+
+const generateCards = () => {
+  USERS.forEach(user => {
+    console.log(`El nombre del usuario es: ${user.name}`);
+    console.log(`La edad es: ${user.age}`);
+    console.log(`La imagen es: ${user.profileImage}`);
+  });
+};
+
+generateCards();
