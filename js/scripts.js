@@ -255,19 +255,34 @@ const USERS = [
 ];
 
 const fragment = document.createDocumentFragment();
-const divCard = document.getElementById('div');
-const nameCard = document.getElementById('p');
-const ageCard = document.getElementById('p');
-const userNameCard = document.getElementById('p');
-const emailCard = document.getElementById('p');
-const imageCard = document.getElementById('img');
 
 const generateCards = () => {
   USERS.forEach(user => {
-    console.log(`El nombre del usuario es: ${user.name}`);
-    console.log(`La edad es: ${user.age}`);
-    console.log(`La imagen es: ${user.profileImage}`);
+    const divCard = document.createElement('div');
+
+    const imageCard = document.createElement('img');
+    imageCard.src = user.profileImage;
+    divCard.append(imageCard);
+
+    const nameCard = document.createElement('p');
+    nameCard.textContent = `Name: ${user.name}`;
+    divCard.append(nameCard);
+
+    const ageCard = document.createElement('p');
+    ageCard.textContent = `Age: ${user.age}`;
+    divCard.append(ageCard);
+
+    const userNameCard = document.createElement('p');
+    userNameCard.textContent = `Username: ${user.username}`;
+    divCard.append(userNameCard);
+
+    const emailCard = document.createElement('p');
+    emailCard.textContent = `Email: ${user.email}`;
+    divCard.append(emailCard);
+
+    fragment.append(divCard);
   });
+  document.body.append(fragment);
 };
 
 generateCards();
